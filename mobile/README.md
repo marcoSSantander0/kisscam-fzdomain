@@ -9,18 +9,51 @@ App Expo para operador: toma foto y sube a Kiss Cam.
 
 - `KISSCAM_BASE_URL` (ejemplo `https://kisscam.fzdomain.cloud`)
 - `UPLOAD_TOKEN` (debe coincidir con backend `web`)
+- `ANDROID_APPLICATION_ID` (ejemplo `cloud.fzdomain.kisscam`)
+- `IOS_BUNDLE_IDENTIFIER` (ejemplo `cloud.fzdomain.kisscam`)
+- `EAS_PROJECT_ID` (opcional hasta correr `eas init`)
 
-## Ejecutar
+## Desarrollo local
 
 ```bash
 npm install
 npm run start
 ```
 
-Para abrir en Android:
+Para Android local:
 
 ```bash
 npm run android
+```
+
+## Instalar en varios moviles (EAS)
+
+1. Preparacion inicial:
+
+```bash
+npm install -g eas-cli
+eas login
+eas init
+```
+
+2. Guarda `UPLOAD_TOKEN` en EAS env:
+
+```bash
+eas env:create --scope project --environment preview --name UPLOAD_TOKEN --value "TU_TOKEN"
+eas env:create --scope project --environment production --name UPLOAD_TOKEN --value "TU_TOKEN"
+```
+
+3. Build APK interna para instalar en varios Android:
+
+```bash
+npm run build:android:apk
+```
+
+4. Builds de produccion:
+
+```bash
+npm run build:android:aab
+npm run build:ios
 ```
 
 ## Flujo

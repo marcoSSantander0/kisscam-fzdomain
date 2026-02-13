@@ -47,6 +47,20 @@ Variables:
 - `KISSCAM_BASE_URL=https://kisscam.fzdomain.cloud`
 - `UPLOAD_TOKEN=CHANGE_ME`
 
+### Mobile distribuible (EAS)
+
+Para instalar en varios moviles sin Expo Go:
+
+```bash
+cd mobile
+npm install -g eas-cli
+eas login
+eas init
+npm run build:android:apk
+```
+
+El build `preview` genera APK instalable en multiples Android. Para iOS/tiendas usa `npm run build:ios` y `npm run build:android:aab`.
+
 ## CI/CD (GitHub Actions)
 
 Workflow: `.github/workflows/deploy.yml`
