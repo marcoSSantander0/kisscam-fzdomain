@@ -57,8 +57,6 @@ export function GalleryClient() {
         </button>
       </div>
 
-      <p className="subtle">Auto-refresh cada 5 segundos.</p>
-
       {initialLoading ? <SkeletonGrid /> : null}
       {!initialLoading && error ? <p className="error-text">{error}</p> : null}
       {!initialLoading && !error && items.length === 0 ? <p className="subtle">Aun no hay fotos disponibles.</p> : null}
