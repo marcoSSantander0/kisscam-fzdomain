@@ -3,7 +3,7 @@
 1. En el VPS, agrega al `.env` del compose root:
 
 ```env
-GHCR_OWNER=TU_USUARIO_GITHUB
+GHCR_OWNER=tu_usuario_github_en_minusculas
 UPLOAD_TOKEN=TU_TOKEN_DE_SUBIDA
 DOMAIN_NAME=fzdomain.cloud
 MAX_UPLOAD_MB=15
