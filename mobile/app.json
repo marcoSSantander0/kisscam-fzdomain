@@ -25,6 +25,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "kisscamBaseUrl": "https://kisscam.fzdomain.cloud",
+      "uploadToken": "14022026",
+      "androidPackage": "cloud.fzdomain.kisscam",
+      "iosBundleIdentifier": "cloud.fzdomain.kisscam",
+      "eas": {
+        "projectId": "e128507d-4336-4153-97d8-2b6f9b24f6f2"
+      }
+    },
+    "owner": "zeromercy"
   }
 }
