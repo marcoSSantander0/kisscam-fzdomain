@@ -1,0 +1,20 @@
+services:
+  kisscam:
+    image: ghcr.io/${GHCR_OWNER}/kisscam-fzdomain:latest
+    restart: unless-stopped
+    environment:
+      UPLOAD_TOKEN: ${UPLOAD_TOKEN}
+      STORAGE_DIR: /app/data/images
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-15}
+    volumes:
+      - kisscam_images:/app/data/images
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.kisscam.rule=Host(`kisscam.${DOMAIN_NAME}`)
+      - traefik.http.routers.kisscam.entrypoints=websecure
+      - traefik.http.routers.kisscam.tls=true
+      - traefik.http.routers.kisscam.tls.certresolver=mytlschallenge
+      - traefik.http.services.kisscam.loadbalancer.server.port=3000
+
+volumes:
+  kisscam_images:

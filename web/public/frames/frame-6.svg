@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" fill="none">
+  <defs>
+    <linearGradient id="night" x1="540" y1="24" x2="540" y2="1416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3d3d9a"/>
+      <stop offset="1" stop-color="#14173f"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="22" width="1036" height="1396" rx="76" stroke="url(#night)" stroke-width="34"/>
+  <rect x="58" y="58" width="964" height="1324" rx="60" stroke="#9ca4ff" stroke-width="7"/>
+  <g fill="#fff" opacity="0.85">
+    <circle cx="110" cy="260" r="4"/>
+    <circle cx="950" cy="260" r="4"/>
+    <circle cx="110" cy="1120" r="4"/>
+    <circle cx="950" cy="1120" r="4"/>
+    <circle cx="170" cy="140" r="3"/>
+    <circle cx="910" cy="140" r="3"/>
+    <circle cx="170" cy="1300" r="3"/>
+    <circle cx="910" cy="1300" r="3"/>
+  </g>
+  <g fill="#e3b3ff" opacity="0.9">
+    <path d="M520 104c0-16 12-28 28-28 9 0 17 4 22 11 5-7 13-11 22-11 16 0 28 12 28 28 0 32-50 60-50 60s-50-28-50-60z"/>
+    <path d="M520 1336c0 16 12 28 28 28 9 0 17-4 22-11 5 7 13 11 22 11 16 0 28-12 28-28 0-32-50-60-50-60s-50 28-50 60z"/>
+  </g>
+</svg>
