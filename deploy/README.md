@@ -9,6 +9,11 @@ DOMAIN_NAME=fzdomain.cloud
 MAX_UPLOAD_MB=15
 ```
 
+Notas importantes:
+
+- `GHCR_OWNER` debe ir en minusculas (ejemplo: `marcossantander0`).
+- Si `UPLOAD_TOKEN` contiene `$`, en `.env` debes escaparlo como `$$` para que Docker Compose no intente interpolarlo.
+
 2. Copia el contenido de `docker-compose.kisscam.snippet.yml` dentro de tu `docker-compose.yml` root del VPS.
 
 3. Asegurate de que el VPS ya tenga acceso a GHCR (segun tu setup ya esta logueado).
