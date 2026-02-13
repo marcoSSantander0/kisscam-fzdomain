@@ -12,7 +12,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   name: "Kiss Cam Operator",
   slug: "kisscam-fzdomain-mobile",
   version: "1.0.0",
-  orientation: "portrait",
+  orientation: "default",
   scheme: "kisscam",
   plugins: ["expo-camera"],
   ios: {

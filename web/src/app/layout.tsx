@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kiss Cam - Galeria publica",
-  description: "Galeria publica de fotos Kiss Cam con marcos romanticos.",
+  title: "Snack&Love Kisscam",
+  description: "Galeria publica Snack&Love Kisscam con marcos romanticos.",
 };
 
 export default function RootLayout({

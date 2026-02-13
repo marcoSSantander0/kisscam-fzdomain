@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { readImageFromDisk } from "@/lib/storage";
+import { deleteImageFromDisk, readImageFromDisk } from "@/lib/storage";
 
 export const runtime = "nodejs";
 
@@ -16,6 +16,27 @@ type RouteContext = {
     id: string;
   }>;
 };
+
+function jsonNoStore(body: unknown, status = 200): NextResponse {
+  return NextResponse.json(body, {
+    status,
+    headers: { "Cache-Control": "no-store" },
+  });
+}
+
+function validateOperatorToken(request: Request): { ok: boolean; status: number; message: string } {
+  const expectedToken = process.env.UPLOAD_TOKEN;
+  if (!expectedToken) {
+    return { ok: false, status: 500, message: "UPLOAD_TOKEN no configurado en servidor." };
+  }
+
+  const providedToken = request.headers.get("x-upload-token");
+  if (!providedToken || providedToken !== expectedToken) {
+    return { ok: false, status: 401, message: "X-Upload-Token invalido." };
+  }
+
+  return { ok: true, status: 200, message: "ok" };
+}
 
 export async function GET(_request: Request, context: RouteContext): Promise<Response> {
   try {
@@ -48,5 +69,26 @@ export async function GET(_request: Request, context: RouteContext): Promise<Res
         headers: { "Cache-Control": "no-store" },
       },
     );
+  }
+}
+
+export async function DELETE(request: Request, context: RouteContext): Promise<Response> {
+  const auth = validateOperatorToken(request);
+  if (!auth.ok) {
+    return jsonNoStore({ error: auth.message }, auth.status);
+  }
+
+  try {
+    const { id } = await context.params;
+    const deleted = await deleteImageFromDisk(decodeId(id));
+
+    if (!deleted) {
+      return jsonNoStore({ error: "Imagen no encontrada." }, 404);
+    }
+
+    return jsonNoStore({ ok: true, id: decodeId(id) }, 200);
+  } catch (error) {
+    console.error("DELETE /api/images/[id] error:", error);
+    return jsonNoStore({ error: "No se pudo eliminar la imagen." }, 500);
   }
 }

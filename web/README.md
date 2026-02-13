@@ -22,6 +22,9 @@ MAX_UPLOAD_MB=15
   - Lista `[{ id, url, createdAt }]` ordenado por mas reciente.
 - `GET /api/images/[id]`:
   - Devuelve el archivo.
+- `DELETE /api/images/[id]`:
+  - Requiere `X-Upload-Token`.
+  - Uso pensado para operador (app movil), no para UI web publica.
 
 ## Desarrollo
 

@@ -7,7 +7,7 @@ import { ImageModal } from "@/components/ImageModal";
 import { SkeletonGrid } from "@/components/SkeletonGrid";
 import type { ImageItem } from "@/lib/types";
 
-const POLLING_INTERVAL_MS = 3000;
+const POLLING_INTERVAL_MS = 5000;
 
 export function GalleryClient() {
   const [items, setItems] = useState<ImageItem[]>([]);
@@ -57,7 +57,7 @@ export function GalleryClient() {
         </button>
       </div>
 
-      <p className="subtle">Auto-refresh cada 3 segundos.</p>
+      <p className="subtle">Auto-refresh cada 5 segundos.</p>
 
       {initialLoading ? <SkeletonGrid /> : null}
       {!initialLoading && error ? <p className="error-text">{error}</p> : null}

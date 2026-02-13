@@ -59,6 +59,9 @@ npm run build:ios
 
 1. Pantalla camara.
 2. Captura foto.
-3. Previsualiza.
+3. Previsualiza con marcos rectangulares ajustados al borde.
 4. Subir (`multipart/form-data`, campo `photo`, header `X-Upload-Token`).
 5. Estado visible: `subiendo`, `ok`, `error`.
+6. Historial en servidor (auto-refresh cada 5s) con opcion de eliminar fotos.
+
+La app admite orientacion vertical y horizontal.

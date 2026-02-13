@@ -34,6 +34,16 @@ button {
 .hero h1 {
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(145deg, rgba(255, 220, 234, 0.95), rgba(255, 241, 246, 0.96));
+  border: 1px solid #f7c7d9;
+  border-radius: 1.2rem;
+  padding: 1.1rem 1rem 1.2rem;
+  box-shadow: 0 16px 38px rgba(122, 25, 66, 0.12);
 }
 
 .hero p {
@@ -41,8 +51,26 @@ button {
   color: var(--muted);
 }
 
-.hero {
-  text-align: center;
+.hero-subtitle {
+  font-size: 1.02rem;
+}
+
+.hero-tags {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hero-tags span {
+  border: 1px solid #ef9dbb;
+  background: rgba(255, 255, 255, 0.75);
+  color: #7b2c4f;
+  border-radius: 999px;
+  padding: 0.26rem 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .gallery-section {

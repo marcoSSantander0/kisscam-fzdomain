@@ -12,7 +12,9 @@ Repositorio full-stack para Kiss Cam:
 1. Operador toma foto desde `mobile`.
 2. `mobile` sube archivo a `POST /api/upload` con `X-Upload-Token`.
 3. `web` publica todas las fotos en `GET /api/images`.
-4. Usuario abre `kisscam.fzdomain.cloud`, elige marco y descarga la composicion.
+4. Usuario abre `Snack&Love Kisscam` en `kisscam.fzdomain.cloud`, elige marco y descarga la composicion.
+
+Desde `mobile`, el operador tambien puede revisar historial y eliminar fotos del servidor (protegido por token).
 
 Sin login, sin Google Drive, sin base de datos obligatoria. Las fotos viven en disco (`STORAGE_DIR`).
 

@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { getMaxUploadBytesFromEnv, getStorageDirFromEnv } from "@/lib/config";
 import type { ImageItem } from "@/lib/types";
@@ -122,4 +122,20 @@ export async function saveUploadedImage(file: File): Promise<{ id: string; url: 
     id: fileId,
     url: `/api/images/${encodeURIComponent(fileId)}`,
   };
+}
+
+export async function deleteImageFromDisk(id: string): Promise<boolean> {
+  const storageDir = await ensureStorageDir();
+  const safeId = normalizeImageId(id);
+  if (!safeId) {
+    return false;
+  }
+
+  const fullPath = path.join(storageDir, safeId);
+  try {
+    await unlink(fullPath);
+    return true;
+  } catch {
+    return false;
+  }
 }

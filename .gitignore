@@ -4,3 +4,4 @@ dist
 .expo
 .env
 *.log
+/package-lock.json
