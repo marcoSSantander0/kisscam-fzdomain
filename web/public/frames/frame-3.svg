@@ -1,13 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" fill="none">
-  <rect x="22" y="22" width="1036" height="1396" rx="80" stroke="#7fc7ff" stroke-width="30"/>
-  <rect x="60" y="60" width="960" height="1320" rx="64" stroke="#d5efff" stroke-width="6"/>
-  <g fill="#d9f0ff">
-    <path d="M170 200l16 44 44 16-44 16-16 44-16-44-44-16 44-16z"/>
-    <path d="M910 200l16 44 44 16-44 16-16 44-16-44-44-16 44-16z"/>
-    <path d="M170 1240l16 44 44 16-44 16-16 44-16-44-44-16 44-16z"/>
-    <path d="M910 1240l16 44 44 16-44 16-16 44-16-44-44-16 44-16z"/>
-  </g>
-  <g stroke="#b7e4ff" stroke-width="8" stroke-linecap="round" opacity="0.85">
-    <path d="M90 420h90M900 420h90M90 1020h90M900 1020h90"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" width="1080" height="1440" fill="none">
+<rect x="48.60" y="48.60" width="982.80" height="1342.80" rx="28" stroke="#ff4aa2" stroke-opacity="0.9" stroke-width="10"/>
+<rect x="64.60" y="64.60" width="950.80" height="1310.80" rx="24" stroke="#ffb1d5" stroke-opacity="0.9" stroke-width="6"/>
+<line x1="54.54" y1="106.92" x2="130.14" y2="106.92" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="92.34" y1="69.12" x2="92.34" y2="144.72" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="65.88" y1="80.46" x2="118.80" y2="133.38" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="65.88" y1="133.38" x2="118.80" y2="80.46" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="939.06" y1="121.50" x2="1036.26" y2="121.50" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="987.66" y1="72.90" x2="987.66" y2="170.10" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="953.64" y1="87.48" x2="1021.68" y2="155.52" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="953.64" y1="155.52" x2="1021.68" y2="87.48" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="78.84" y1="1347.66" x2="154.44" y2="1347.66" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="116.64" y1="1309.86" x2="116.64" y2="1385.46" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="90.18" y1="1321.20" x2="143.10" y2="1374.12" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="90.18" y1="1374.12" x2="143.10" y2="1321.20" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="924.48" y1="1337.94" x2="1021.68" y2="1337.94" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="973.08" y1="1289.34" x2="973.08" y2="1386.54" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="939.06" y1="1303.92" x2="1007.10" y2="1371.96" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="939.06" y1="1371.96" x2="1007.10" y2="1303.92" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="502.20" y1="87.48" x2="577.80" y2="87.48" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="540.00" y1="49.68" x2="540.00" y2="125.28" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="513.54" y1="61.02" x2="566.46" y2="113.94" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="513.54" y1="113.94" x2="566.46" y2="61.02" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="491.40" y1="1352.52" x2="588.60" y2="1352.52" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="540.00" y1="1303.92" x2="540.00" y2="1401.12" stroke="#ffd2e8" stroke-width="3"/>
+<line x1="505.98" y1="1318.50" x2="574.02" y2="1386.54" stroke="#ffd2e8" stroke-width="2"/>
+<line x1="505.98" y1="1386.54" x2="574.02" y2="1318.50" stroke="#ffd2e8" stroke-width="2"/>
 </svg>
